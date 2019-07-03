@@ -1,64 +1,80 @@
-.video-container {
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.v-header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.container {
+    max-width: 960px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    text-align: center;
+}
+
+.fullscreen-video-wrap {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    overflow: hidden;
 }
-.video-container > video {
+
+.fullscreen-video-wrap video {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.header-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #225470;
+    z-index: 1;
+    opacity: 0.85;
+}
+
+.header-content {
+    z-index: 2;
+}
+
+.header-content h1 {
+    font-size: 10rem;
+    font-family: "Airstream NF";
     display: block;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+    padding-bottom: 2rem;
 }
-@media screen and (max-aspect-ratio: 1920/1080) {
-    .video-container > video {
-        height: 100%;
+
+.btn {
+    background: grey;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+
+@media(max-width:960px) {
+    .container {
+        padding-right: 3rem;
+        padding-left: 3rem;
     }
-}
-@media screen and (min-aspect-ratio: 1920/1080) {
-    .video-container > video {
-        width: 100%;
-    }
-}
-.master-container {
-    background-color:grey;
-    margin-top: 1000;
-}
-.iphone-container {
-    margin-top: 1000px;
-    margin-left: 750px;
-    z-index: auto;
-    position: absolute;
-    z-index: 10;
-}
-.iphone {
-    width: 325px;
-    height: 450px;
-    background-image: url(images/iphone.svg);
-    background-size: cover;
-    margin: auto;
-}
-.feed {
-    width: 325px;
-    height: 450px;
-    text-align: center;
-    padding-top: 33px;
-    z-index: auto;
-}
-.video-bckg {
-    opacity: 0.7;
-}
-.podcast-img {
-    position: absolute;
-    z-index: 0;
-    margin-top: 800px;
-    margin-left: 150px;
-}
-.podcast {
-    position: absolute;
-    margin-top: 1400px;
-    margin-left: 400px;
 }

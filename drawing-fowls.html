@@ -8,30 +8,18 @@
         <link rel="stylesheet" href="./css/style.css"/>
     </head>
     <body>
-        <div class="video-container bg-dark">
-            <video autoplay muted loop center class="video-bckg">
-                <source src="videos/drawingFowls.mp4" type="video/mp4">
-                Drawing fowls logo backdrop
-            </video>
-        </div>
-        <div class="master-container">
-            <div class="iphone-container">
-                    <div class="iphone">
-                        <div class="feed">
-                            <a class="twitter-timeline" href="https://twitter.com/DrawingFowls?ref_src=twsrc%5Etfw" data-width="175"
-                            data-height="390" data-chrome="noscrollbar nofooter">Tweets by DrawingFowls</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                        </div>
-                    </div>
-                </div>
-            <div class="podcast-img">
-                <img src="images/DF-ball.svg" alt="DF-logo" style="width:800px;height:800px;"/>
+        <header class="v-header container">
+            <div class="fullscreen-video-wrap">
+                <video src="./videos/drawingFowls.mp4" autoplay="true" loop="true" muted="true"></video>
             </div>
-            <div class="podcast">          
-                <audio controls>
-                    <source src="audio/df-test.mp3" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                </audio>
+            <div class="header-overlay"></div>
+            <div class="header-content">
+                <h1>Welcome!</h1>
+                <p>Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Corporis unde nemo, obcaecati ipsam nostrum 
+                    placeat velit. Ipsam sit magni veritatis!</p>
+                <a href="#" class="btn">Listen Here</a>
             </div>
-        </div>
+        </header>
     </body>
 </html>
