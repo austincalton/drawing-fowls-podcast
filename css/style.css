@@ -27,13 +27,14 @@ body {
 
 .fullscreen-video-wrap {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100vw;
+    max-height: 100vh;
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
@@ -43,8 +44,8 @@ body {
 }
 
 .header-overlay {
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
     position: absolute;
     top: 0;
     left: 0;
@@ -55,11 +56,13 @@ body {
 
 .header-content {
     z-index: 2;
+    max-width: 50%;
+    margin: auto;
 }
 
 .header-content h1 {
-    font-size: 10rem;
-    font-family: "Airstream NF";
+    font-size: 5rem;
+    font-family: 'Lobster', cursive;
     display: block;
     padding-bottom: 2rem;
 }
@@ -70,6 +73,60 @@ body {
     font-size: 1.2rem;
     padding: 1rem 2rem;
     text-decoration: none;
+}
+
+.master-podcast-player-wrapper {
+    border: solid black;
+    max-width: 1000px;
+    min-height: 500px;
+    margin: 0 auto;
+}
+
+.podcast-logo-wrapper {
+    width: 50%;
+    float: left;
+    text-align: center;
+    border: solid red;
+    height: 600px;
+}
+
+.podcast-logo {
+    height: 100%;
+    width: 100%;
+    padding: none;
+    margin: none;
+}
+
+.twitter-feed-wrapper {
+    width: 50%;
+    margin-left: 50%;
+    text-align: center;
+    border: solid green;
+    height: 600px;
+}
+
+.iphone {
+    width: 100%;
+    height: 100%;
+    background-image: url(images/iphone.svg);
+    background-size: cover;
+    margin: auto;
+}
+.feed {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 33px;
+}
+
+.audio-player-wrapper {
+    border: solid blue;
+    width: 50%;
+    float: left;
+}
+
+.audio-player {
+    margin-left: 20px;
 }
 
 @media(max-width:960px) {
