@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-size: 1rem;
@@ -108,7 +112,7 @@ body {
 .iphone {
     width: 100%;
     height: 100%;
-    background-image: url(images/iphone.svg);
+    background-image: url(../images/iphone.svg);
     background-size: cover;
     margin: auto;
 }
@@ -127,6 +131,66 @@ body {
 
 .audio-player {
     margin-left: 20px;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(2, 600px);
+    grid-template-rows: repeat(1, 500px);
+    grid-gap: 5px;
+    position: absolute;
+    top: 140vh;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.div1 {
+    background-color: lightblue;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80% 20%;
+    
+}
+
+.inner-div1-1 {
+    background-color: lightgrey;
+    border-bottom: solid white 5px;
+}
+
+.podcast-logo {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.inner-div1-2 {
+    background-color: lightblue;
+}
+
+.audio-player {
+    width: 90%;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.div2 {
+    background-color: grey;
+    position: relative;
+}
+
+.twitter-timeline {
+    margin-left: 215px;
+    top: 50px;
+    position: absolute;
+    z-index: 100 !important;
+    opacity: 0.99;
+}
+
+.iphone-1 {
+    max-height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0.98;
+    padding-left: 40px;
 }
 
 @media(max-width:960px) {
